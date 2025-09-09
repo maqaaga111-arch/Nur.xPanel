@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VIP Sorgu Paneli — Sorgu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root{
+      --bg-1:#05040b;
+      --bg-2:#071428;
+      --gold:#ffd94d;
+      --muted:rgba(255,255,255,0.62);
+      --glass-border: rgba(255,255,255,0.04);
+      --accent-grad: linear-gradient(90deg,#ffd94d,#ff7a6c 60%);
+    }
+    html,body{height:100%;margin:0;font-family:'Poppins',sans-serif;color:#fff;background:
+      radial-gradient(800px 400px at 10% 10%, rgba(255,217,102,0.03), transparent 8%),
+      radial-gradient(700px 300px at 90% 80%, rgba(255,120,97,0.02), transparent 10%),
+      linear-gradient(180deg,var(--bg-1),var(--bg-2));
+      display:flex;align-items:center;justify-content:center;padding:28px 28px 60px; /* extra bottom padding for mobile */
+      -webkit-overflow-scrolling: touch;
+      overflow:auto;} /* allow scrolling on mobile */
+    *{box-sizing:border-box}
+    #bgCanvas{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.22;filter:blur(5px) contrast(1.05)}
+    .stage{z-index:1;width:100%;max-width:1120px;display:grid;grid-template-columns:440px 1fr;gap:28px;align-items:start;perspective:1400px}
+    .card{position:relative;border-radius:18px;padding:26px;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));border:1px solid var(--glass-border);box-shadow:0 12px 40px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);backdrop-filter: blur(6px) saturate(1.05);overflow:visible}
+    .card:before{content:'';position:absolute;inset:-2px;border-radius:20px;padding:2px;z-index:-1;background:linear-gradient(90deg,#ff7a6c,#ffd94d,#9d6bff 70%);filter:blur(22px);opacity:0.12}
+    .card:after{content:'';position:absolute;right:-48px;top:-36px;width:240px;height:240px;background:radial-gradient(circle at 30% 30%, rgba(255,217,102,0.09), transparent 18%);filter:blur(22px);transform:rotate(-8deg);pointer-events:none;opacity:0.95}
+    .brand{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+    .logo{width:62px;height:62px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--gold);background:linear-gradient(135deg,#0b1420 0%, rgba(255,255,255,0.02) 50%);border:1px solid rgba(255,255,255,0.04);box-shadow:0 8px 30px rgba(0,0,0,0.6),0 0 20px rgba(255,217,102,0.04)}
+    .brand h2{margin:0;font-size:1.02rem}
+    .brand p{margin:0;font-size:0.82rem;color:var(--muted)}
+    .home-btn{position:absolute;right:18px;top:18px;display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,0.03);color:var(--gold);text-decoration:none;font-weight:700;border:1px solid rgba(255,255,255,0.06);box-shadow:0 6px 18px rgba(0,0,0,0.5);transition:transform .12s ease}
+    .home-btn:hover{transform:translateY(-4px);box-shadow:0 14px 40px rgba(0,0,0,0.6)}
+    h1#form-title{font-family:'Space Grotesk',sans-serif;font-size:1.45rem;margin:0 0 12px 0;color:var(--gold);text-shadow:0 6px 20px rgba(255,217,102,0.06)}
+    .subbar{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+    .pill{padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,rgba(255,255,255,0.03),rgba(0,0,0,0.25));border:1px solid rgba(255,255,255,0.03);font-weight:700;font-size:0.85rem}
+    .hint{font-size:0.9rem;color:rgba(255,255,255,0.72);margin-left:auto}
+    form{width:100%;display:flex;flex-direction:column;gap:12px;margin-top:8px}
+    input[type='text']{width:100%;padding:14px 16px;border-radius:12px;border:1px solid rgba(255,255,255,0.06);background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.24));color:#fff;font-size:0.98rem;outline:none;box-shadow:0 10px 24px rgba(2,6,23,0.55), inset 0 -6px 18px rgba(255,255,255,0.01);transition:all .18s ease}
+    input::placeholder{color:rgba(255,255,255,0.42)}
+    input:focus{transform:translateY(-3px) scale(1.01);border-color:var(--gold);box-shadow:0 10px 30px rgba(255,217,77,0.06),0 0 26px rgba(255,217,77,0.06)}
+    .field-row{display:flex;gap:10px}
+    .field-row input{flex:1}
+    button{appearance:none;-webkit-appearance:none;border:none;padding:13px 18px;border-radius:12px;font-weight:800;font-size:1rem;cursor:pointer;background:var(--accent-grad);color:#0a0a0a;display:inline-flex;align-items:center;gap:10px;justify-content:center;box-shadow:0 12px 40px rgba(255,110,80,0.12);transition:transform .15s ease}
+    button:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 18px 60px rgba(255,110,80,0.14)}
+    #result{margin-top:18px;padding:18px;border-radius:12px;background:linear-gradient(180deg,rgba(3,6,23,0.6),rgba(3,6,23,0.45));border:1px solid rgba(255,255,255,0.03);box-shadow:0 14px 48px rgba(0,0,0,0.6), inset 0 0 26px rgba(0,0,0,0.15);font-size:0.98rem;line-height:1.5;min-height:80px;max-height:420px;overflow:auto}
+    .info{border-radius:18px;padding:20px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04);box-shadow:0 12px 50px rgba(2,6,23,0.6)}
+    .info .row{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+    .chip{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);font-weight:600}
+    .stat{font-size:1.6rem;font-weight:700;color:var(--gold)}
+    .muted{color:var(--muted);font-size:0.88rem}
+    @media(max-width:980px){.stage{grid-template-columns:1fr;padding:12px}.card{order:2}.info{order:1}}
+  </style>
+</head>
+<body>
+  <canvas id="bgCanvas"></canvas>
+
+  <div class="stage">
+    <div class="card">
+      <div class="brand">
+        <div class="logo"><i class="fa-solid fa-crown"></i></div>
+        <div>
+          <h2>EZEL SORGU</h2>
+          <p class="muted">VIP Sorgu - Ultra Görünüm</p>
+        </div>
+        <a href="/" class="home-btn"><i class="fa-solid fa-house"></i> Anasayfaya Dön</a>
+      </div>
+
+      <h1 id="form-title">VIP Sorgu Paneli</h1>
+      <div class="subbar">
+        <div class="pill">Dinamik Form — JS ile doldurulur</div>
+        <div class="hint">İşlemler korunmuştur — sadece görünüm değişti.</div>
+      </div>
+
+      <form id="queryForm"></form>
+
+      <div id="result"></div>
+    </div>
+
+    <div class="info">
+      <div class="row">
+        <div>
+          <div class="muted">Hızlı Bilgiler</div>
+          <div class="stat">VIP • ÖZEL</div>
+        </div>
+        <div class="chip"><i class="fa-regular fa-star"></i> PREMIUM</div>
+      </div>
+
+      <div class="row">
+        <div>
+          <div class="muted">Sorgu Tipi</div>
+          <div id="displayApi" class="muted">—</div>
+        </div>
+        <div>
+          <div class="muted">Aktif Modül</div>
+          <div class="chip">Otomatik</div>
+        </div>
+      </div>
+
+      <div style="margin-top:18px;" class="muted">Kısa İpuçları</div>
+      <ul style="margin-top:10px;color:rgba(255,255,255,0.78);font-size:0.95rem;line-height:1.5">
+        <li>Form alanları aynı ID'lerle oluşturulur; API parametresiyle uyumlu çalışır.</li>
+        <li>Sonuçlar hemen altta okunabilir şekilde görüntülenecektir.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    /* Decorative particles (non-invasive) */
+    (function(){
+      const canvas = document.getElementById('bgCanvas');
+      const ctx = canvas.getContext('2d');
+      let w = canvas.width = innerWidth, h = canvas.height = innerHeight;
+      const parts = [];
+      const count = Math.max(30, Math.round((w*h)/120000));
+      for(let i=0;i<count;i++) parts.push({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.6+0.6,vx:(Math.random()-0.5)*0.12,vy:(Math.random()-0.2)*0.08,alpha:Math.random()*0.6+0.15});
+      function resize(){w=canvas.width=innerWidth;h=canvas.height=innerHeight}
+      addEventListener('resize', resize);
+      function draw(){ctx.clearRect(0,0,w,h);for(const p of parts){p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=w;if(p.x>w)p.x=0;if(p.y<0)p.y=h;if(p.y>h)p.y=0;ctx.beginPath();ctx.globalAlpha=p.alpha;ctx.fillStyle='rgba(255,200,120,1)';ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill()}ctx.globalAlpha=1;requestAnimationFrame(draw)}
+      draw();
+    })();
+
+    /* ================= ORIGINAL LOGIC (kept intact) ================= */
+    const api = new URLSearchParams(window.location.search).get('api');
+    const formTitle = document.getElementById('form-title');
+    const form = document.getElementById('queryForm');
+    const resultDiv = document.getElementById('result');
+
+    const apiInputs = {
+      // TC tabanlı
+      'tc_sorgulama': ['tc'],
+      'tc_pro_sorgulama': ['tc'],
+      'yas': ['tc'],
+      'ad_soyad_pro': ['tc'],
+      'is_yeri': ['tc'],
+      'tc_gsm': ['tc'],
+      'adres': ['tc'],
+      'hane': ['tc'],
+      'apartman': ['tc'],
+      'ada_parsel': ['tc'],
+      'aile': ['tc'],
+      'aile_pro': ['tc'],
+      'es': ['tc'],
+      'sulale': ['tc'],
+      'lgs': ['tc'],
+      'e-kurs': ['tc','okulno'],
+      'mhrs_randevu': ['tc'],
+      'prem_adres': ['tc'],
+      'sgk_pro': ['tc'],
+      'vergi_levhasi': ['tc'],
+      'diploma': ['tc'],
+      'basvuru': ['tc'],
+      'nobetci_eczane': ['tc'],
+      'randevu': ['tc'],
+      'internet': ['tc'],
+      'personel': ['tc'],
+      'universite': ['tc'],
+      'sertifika': ['tc'],
+      'lgs_2': ['tc'],
+      'muhalle': ['tc'],
+      'vesika': ['tc'],
+      'ehliyet': ['tc'],
+      'boy': ['tc'],
+      'ayak_no': ['tc'],
+      'cm': ['tc'],
+      'burc': ['tc'],
+      'cocuk': ['tc'],
+      'baba': ['tc'],
+      'anne': ['tc'],
+
+      // Ad / Soyad
+      'ad_soyad': ['ad','soyad','il','ilce'],
+      'adi_il_ilce': ['ad','il','ilce'],
+      'prem_ad': ['ad','il','ilce'],
+      'interpol': ['ad','soyad'],
+      'sehit': ['ad','soyad'],
+
+      // GSM / Plaka
+      'gsm_tc': ['gsm'],
+      'operator': ['gsm'],
+      'arac_parca': ['plaka'],
+      'arac_borc': ['plaka'],
+
+      // Domain
+      'ip': ['domain'],
+      'dns': ['domain'],
+      'whois': ['domain'],
+      'subdomain': ['url'],
+      'leak': ['query'],
+
+      // Telegram
+      'telegram_sorgu': ['kullanici'],
+
+      // Şifre / diğer
+      'sifre_encrypt': ['method','password'],
+      'facebook': ['numara'],
+      'havadurumu': ['sehir'],
+      'email': ['email'],
+      'nude': []
+    };
+
+    function buildForm() {
+      const inputs = apiInputs[api];
+      if(!inputs) {
+        formTitle.textContent = 'Geçersiz Sorgu';
+        form.innerHTML = '<p>Geçersiz veya desteklenmeyen sorgu türü.</p>';
+        const displayApi = document.getElementById('displayApi');
+        if(displayApi) displayApi.textContent = 'Geçersiz';
+        return;
+      }
+
+      const labels = {
+        'tc':'TC Kimlik No','ad':'Ad','soyad':'Soyad','il':'İl (Opsiyonel)','ilce':'İlçe (Opsiyonel)',
+        'okulno':'Okul No','kullanici':'Telegram Kullanıcı Adı','vergi':'Vergi No',
+        'domain':'Domain','url':'URL','query':'Sorgu','method':'Metod','password':'Şifre',
+        'numara':'Numara','plaka':'Plaka','sehir':'Şehir','email':'E-Mail'
+      };
+
+      formTitle.textContent = api ? (api.replace(/_/g,' ').toUpperCase() + ' Sorgu') : 'GENEL SORGULAMA';
+      const displayApi = document.getElementById('displayApi');
+      if(displayApi) displayApi.textContent = api || '—';
+      form.innerHTML = '';
+
+      // Special-case: if api is 'ad_soyad', only 'ad' and 'soyad' are required; others optional
+      const isAdSoyadApi = (api === 'ad_soyad');
+
+      inputs.forEach(i=>{
+        // decide required attribute
+        let requiredAttr = 'required'; // default: required
+        if(isAdSoyadApi){
+          if(i === 'ad' || i === 'soyad') requiredAttr = 'required';
+          else requiredAttr = ''; // optional fields
+        }
+        // build input; if optional, omit required attribute
+        form.innerHTML += `<input type="text" id="${i}" placeholder="${labels[i]||i}" ${requiredAttr} />`;
+      });
+      form.innerHTML += '<button type="submit"><i class="fa-solid fa-magnifying-glass"></i> Sorgula</button>';
+    }
+
+    buildForm();
+
+    /* =========== Pretty formatting for JSON responses =========== */
+    function formatDataAsText(dataArray){
+      let out = '';
+      dataArray.forEach((obj, idx) => {
+        out += `Sonuç ${idx+1}\n\n`;
+        const keys = Object.keys(obj);
+        const maxKeyLen = keys.reduce((m,k)=>Math.max(m, String(k).length), 0);
+        const sepLen = Math.max(6, 18 - Math.min(maxKeyLen, 12));
+        keys.forEach(k=>{
+          let val = obj[k];
+          if(val === null || val === undefined || val === '') val = 'Kayıtlarda Bulunamadı';
+          if(typeof val === 'object') val = JSON.stringify(val);
+          const sep = '-'.repeat(sepLen) + '>';
+          out += `${k} ${sep} ${val}\n`;
+        });
+        out += `\n`;
+      });
+      return out.trim();
+    }
+
+    function escapeHtml(str){
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    form.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      resultDiv.textContent = '⏳ Sorgulanıyor...';
+
+      const body = { api };
+      const inputs = apiInputs[api];
+      if(inputs) {
+        inputs.forEach(i=>{
+          const el = document.getElementById(i);
+          body[i] = el ? el.value.trim() : '';
+        });
+      }
+
+      try {
+        const response = await fetch('/api/sorgu',{
+          method:'POST',
+          headers:{'Content-Type':'application/json'},
+          body: JSON.stringify(body)
+        });
+        const text = await response.text();
+
+        let parsed = null;
+        try { parsed = JSON.parse(text); } catch(err){ parsed = null; }
+
+        if(parsed){
+          if(Array.isArray(parsed.data) && parsed.data.length > 0){
+            const pretty = formatDataAsText(parsed.data);
+            resultDiv.innerHTML = `<pre style="white-space:pre-wrap;font-family:monospace;margin:0;">${escapeHtml(pretty)}</pre>`;
+          } else if(parsed.success && parsed.data && typeof parsed.data === 'object' && Object.keys(parsed.data).length>0){
+            const pretty = formatDataAsText([parsed.data]);
+            resultDiv.innerHTML = `<pre style="white-space:pre-wrap;font-family:monospace;margin:0;">${escapeHtml(pretty)}</pre>`;
+          } else {
+            resultDiv.innerHTML = `<pre style="white-space:pre-wrap;font-family:monospace;margin:0;">${escapeHtml(JSON.stringify(parsed, null, 2))}</pre>`;
+          }
+        } else {
+          resultDiv.textContent = text;
+        }
+
+      } catch(err) {
+        resultDiv.textContent = '❌ Hata: ' + err.message;
+      }
+    });
+  </script>
+</body>
+</html>
