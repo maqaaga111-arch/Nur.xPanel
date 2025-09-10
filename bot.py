@@ -603,7 +603,7 @@ def api_sorgu():
             return jsonify({'error':'Geçersiz param','param':p}), 400
         params[p] = val
 
-    base = 'https://kenevizsanalapi-1.onrender.com/api/'
+    base = 'https://keneviz.kolsuzpabg.workers.dev/api/'
     return fetch_api_get(base + endpoint, params=params)
 
 # ---------- health ----------
