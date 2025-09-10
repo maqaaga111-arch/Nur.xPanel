@@ -28,8 +28,8 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 
 SECRET_KEY = os.environ.get('SECRET_KEY', 'dev-secret-CHANGE_ME')
 # VIP bilgileri kullanıcı talebine göre güncellendi:
-VIP_USERNAME = os.environ.get('VIP_USERNAME', 'Ezelim')
-VIP_PASSWORD = os.environ.get('VIP_PASSWORD', 'ezels1kdi')
+VIP_USERNAME = os.environ.get('VIP_USERNAME', 'Zekeriya')
+VIP_PASSWORD = os.environ.get('VIP_PASSWORD', 'Zekeriya0101')
 FREE_USERNAME = os.environ.get('FREE_USERNAME', 'free_user')
 FREE_PASSWORD = os.environ.get('FREE_PASSWORD', 'free_pass')
 KENVIZ_CHALLENGE_TOKEN = os.environ.get('KENVIZ_CHALLENGE_TOKEN', 'letmein')
