@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -29,10 +30,11 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUyenMwMTB4aGUyeWJhZnozYzJxZDMwc3drMmdjNjBhejY0bHJ4MWl3eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3og0ILLVvPp8d64Jd6/giphy.gif');
+    background-image: url('https://customer-assets.emergentagent.com/job_113206d4-7291-4420-b963-152d9684f31b/artifacts/tep2vdkc_6ed1022b33a34f5eb5b54468600d8868.jpg');
     background-size: cover;
     background-position: center;
     z-index: -1; /* Arka planda kalması için */
+    filter: grayscale(0.3) brightness(0.7);
   }
 
   .welcome-text {
@@ -78,60 +80,468 @@
   }
   #__vip_submsg { display:block; margin-top:8px; font-size:13px; color:#d9f7ff; font-weight:700; }
 
-  /* --- SIDEBAR (mevcut) --- */
+  /* --- SIDEBAR (güncellenmiş neon kırmızı tema) --- */
   #sidebar {
     width: 320px;
-    background: #1a1a2e;
-    border-right: 2px solid #00e6ff;
+    background: #0a0a0a;
+    border-right: 3px solid #ff0000;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
     scrollbar-width: thin;
-    scrollbar-color: #00e6ff transparent;
+    scrollbar-color: #ff0000 transparent;
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     display: none;
     z-index: 1000;
+    box-shadow: 
+      0 0 20px rgba(255, 0, 0, 0.5),
+      inset 0 0 20px rgba(255, 0, 0, 0.1);
   }
   #sidebar.active {
     display: flex;
   }
 
-  /* Kullanıcı paneli içerikleri... (orijinal styling korunuyor) */
-  #user-panel { border-bottom: 2px solid #00e6ff; padding: 20px 15px; display: flex; align-items: center; gap: 15px; }
-  #user-panel img { width: 56px; height: 56px; border-radius: 50%; border: 3px solid transparent; background: linear-gradient(90deg, #0ff, #08f); padding: 2px; box-sizing: content-box; }
+  /* Kullanıcı paneli içerikleri... (neon kırmızı güncellemesi) */
+  #user-panel { 
+    border-bottom: 2px solid #ff0000; 
+    padding: 20px 15px; 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    background: rgba(0, 0, 0, 0.5);
+  }
+  #user-panel img { 
+    width: 56px; 
+    height: 56px; 
+    border-radius: 50%; 
+    border: 3px solid #ff0000; 
+    background: linear-gradient(90deg, #ff0000, #ff6666); 
+    padding: 2px; 
+    box-sizing: content-box; 
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+  }
   #user-panel .user-info { display:flex; flex-direction:column; }
-  #user-panel .username { font-weight:700; font-size:18px; color:#fff; }
-  #user-panel .membership { font-size:14px; color:#00e6ff; cursor:pointer; user-select:none; font-weight:600; }
-  #user-panel .membership:hover { text-decoration: underline; }
+  #user-panel .username { 
+    font-weight:700; 
+    font-size:18px; 
+    color:#fff; 
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  }
+  #user-panel .membership { 
+    font-size:14px; 
+    color:#ff0000; 
+    cursor:pointer; 
+    user-select:none; 
+    font-weight:600; 
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.7);
+  }
+  #user-panel .membership:hover { 
+    text-decoration: underline; 
+    color: #ffffff;
+  }
+ info
+
+code
+Code
+
+preview
+Preview
+
+Deploy
+Deploy
+Robot
+Hey rahimaah, Quick input needed :
+Perfect! ✅ İşte güncellenmiş index.html dosyanız /app/updated_index.html olarak hazır!
+
+🎯 Yapılan Değişiklikler:
+1. 🖼️ Fotoğraf Değişimi
+❌ Eski: https://media0.giphy.com/media/.../giphy.gif (hareketli GIF)
+✅ Yeni: Yüklediğiniz Türk askeri fotoğrafı
+Fotoğrafa hafif filtre eklendi: filter: grayscale(0.3) brightness(0.7)
+2. 🔴 Menü & Market Neon Kırmızı Efektleri
+Menü Butonu:
+
+Kırmızı gradyan background: linear-gradient(180deg, #ff0000, #cc0000)
+Kırmızı neon glow: box-shadow: 0 0 20px rgba(255, 0, 0, 0.7)
+Hover efekti: Daha güçlü kırmızı parlaması
+Market Butonu:
+
+Aynı kırmızı neon tasarım
+Hover'da scale efekti: transform: scale(1.05)
+Sidebar Menü:
+
+Siyah arka plan: background: #0a0a0a
+Kırmızı kenarlık: border-right: 3px solid #ff0000
+Kırmızı neon gölgeler ve efektler
+Tüm menü öğeleri kırmızı hover efektli
+3. 🎨 Genel Neon Kırmızı Tema
+Badge'ler kırmızı neon efektli
+Premium bölümleri güçlü kırmızı glow
+Info kartları kırmızı kenarlıklı
+Animasyonlu blob'lar kırmızı-siyah
+📁 Dosya Lokasyonu:
+/app/updated_index.html - Güncellenmiş HTML dosyanız hazır!
+
+Bu dosyayı artık kendi projenizdę kullanabilirsiniz. Tüm işlevsellik korundu, sadece görsel tema kırmızı neon olarak güncellendi! 🚀
+
+Sep 14, 06:16 PM
+
+Copy
+Evet ver şimdi jss fln değil ha direkt index.html olarak ver kk
+
+Sep 14, 06:17 PM
+
+Copy
+Robot
+Viewed
+/app/updated_index.html
+Sep 14, 06:17 PM
+
+Rollback
+Rollback
+
+Copy
+Robot
+İşte tam HTML dosyanız! 🎉
+
+**Satır 32'de** fotoğrafınız:
+
+```html
+
+background-image: url('https://customer-assets.emergentagent.com/job_113206d4-7291-4420-b963-152d9684f31b/artifacts/tep2vdkc_6ed1022b33a34f5eb5b54468600d8868.jpg');
+
+```
+
+**Menü & Market neon kırmızı efektleri:**
+
+- **Satır 317-342**: Butonlar kırmızı neon efektli
+
+- **Satır 83-100**: Sidebar kırmızı kenarlık + neon gölgeler
+
+- **Satır 160-165**: Menü öğeleri kırmızı hover efektli
+
+- **Satır 236-242**: Premium badge'ler kırmızı neon
+
+Bu dosyayı `index.html` olarak kaydedip kullanabilirsiniz! 🚀
+
+Summary: ✅ Görev Tamamlandı!
+
+**Yapılan İşlemler:**
+
+1. **Fotoğraf Değişimi**: Hareketli GIF yerine kullanıcının yüklediği Türk askeri fotoğrafı eklendi
+
+2. **Neon Kırmızı Tema**: Menü ve market butonları ile sidebar tüm neon kırmızı efektlerle güncellendi
+
+3. **Tam HTML Dosyası**: Güncellenmiş index.html dosyası `/app/updated_index.html` olarak hazırlandı
+
+**Özellikler:**
+
+- Kırmızı neon glow efektli menü/market butonları
+
+- Siyah arka planlı sidebar + kırmızı kenarlıklar
+
+- Kırmızı neon efektli tüm menü öğeleri ve badge'ler
+
+- Yüklenen fotoğraf arka plan olarak kullanıldı
+
+- Tüm JavaScript işlevsellik korundu
+
+Kullanıcı istediği değişiklikleri aldı ve tam HTML dosyasına ulaştı! 🎯
+
+
+Save to Github
+github
+
+Preview
+github
+Sep 14, 06:18 PM
+
+Copy
+Agent Finished
+Sep 14, 18:18:02
+İndexhtml yi kopyalanabilir şekilde atarsan sevinirim
+
+Sep 14, 06:37 PM
+
+Copy
+Robot
+Hey rahimaah, Quick input needed :
+Ask Question
+Agent will continue working after your reply
+Tabii! İşte kopyalanabilir HTML dosyanız:
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kullanıcı Paneli</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+  /* Gövde arka plan ve temel renkler */
+  body {
+    background: #151520;
+    color: #c5c7d6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://customer-assets.emergentagent.com/job_113206d4-7291-4420-b963-152d9684f31b/artifacts/tep2vdkc_6ed1022b33a34f5eb5b54468600d8868.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Arka planda kalması için */
+    filter: grayscale(0.3) brightness(0.7);
+  }
+
+  .welcome-text {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ff4dff;
+    text-shadow:
+      0 0 6px rgba(255, 77, 255, 0.95),
+      0 0 14px rgba(255, 77, 255, 0.8),
+      0 0 28px rgba(142, 45, 255, 0.6),
+      0 6px 30px rgba(20, 0, 40, 0.45);
+    text-align: center;
+    line-height: 1.2;
+    white-space: pre-line;
+  }
+
+  .welcome-wrap {
+    position: relative;
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    z-index: 10;
+  }
+  .welcome-wrap .glass-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(8px) saturate(120%);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 8px 20px rgba(2,6,23,0.45);
+    z-index: -1;
+    pointer-events: none;
+  }
+  @media (max-width:420px){
+    .welcome-text { font-size: 28px; }
+    .welcome-wrap { padding: 10px 14px; }
+  }
+  #__vip_submsg { display:block; margin-top:8px; font-size:13px; color:#d9f7ff; font-weight:700; }
+
+  /* --- SIDEBAR (güncellenmiş neon kırmızı tema) --- */
+  #sidebar {
+    width: 320px;
+    background: #0a0a0a;
+    border-right: 3px solid #ff0000;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #ff0000 transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: none;
+    z-index: 1000;
+    box-shadow: 
+      0 0 20px rgba(255, 0, 0, 0.5),
+      inset 0 0 20px rgba(255, 0, 0, 0.1);
+  }
+  #sidebar.active {
+    display: flex;
+  }
+
+  /* Kullanıcı paneli içerikleri... (neon kırmızı güncellemesi) */
+  #user-panel { 
+    border-bottom: 2px solid #ff0000; 
+    padding: 20px 15px; 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    background: rgba(0, 0, 0, 0.5);
+  }
+  #user-panel img { 
+    width: 56px; 
+    height: 56px; 
+    border-radius: 50%; 
+    border: 3px solid #ff0000; 
+    background: linear-gradient(90deg, #ff0000, #ff6666); 
+    padding: 2px; 
+    box-sizing: content-box; 
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+  }
+  #user-panel .user-info { display:flex; flex-direction:column; }
+  #user-panel .username { 
+    font-weight:700; 
+    font-size:18px; 
+    color:#fff; 
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  }
+  #user-panel .membership { 
+    font-size:14px; 
+    color:#ff0000; 
+    cursor:pointer; 
+    user-select:none; 
+    font-weight:600; 
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.7);
+  }
+  #user-panel .membership:hover { 
+    text-decoration: underline; 
+    color: #ffffff;
+  }
 
   nav { flex-grow: 1; padding: 15px 0; }
-  .menu-item { display:flex; align-items:center; gap:10px; padding:14px 30px; font-weight:500; font-size:16px; color:#9ca5b3; cursor:pointer; user-select:none; transition: background 0.4s, color 0.4s; position:relative; }
-  .menu-item.active, .menu-item:hover { background:#252740; color:#00e6ff; }
-  .menu-item i { width:20px; min-width:20px; text-align:center; color:#6b7280; transition: color 0.3s; }
-  .menu-item .arrow { margin-left:auto; font-size:14px; color:#555971; transition: transform 0.3s ease; user-select:none; }
-  .menu-item.expanded .arrow { transform: rotate(90deg); }
-  .section-title { text-transform:uppercase; font-weight:600; color:#6b7280; font-size:13px; letter-spacing:1.5px; margin:15px 30px 7px 30px; }
-  .submenu { background:#16162b; max-height:0; overflow:hidden; transition: max-height 0.35s ease, padding 0.3s ease; }
-  .submenu.open { max-height:500px; padding-left:35px; }
+  .menu-item { 
+    display:flex; 
+    align-items:center; 
+    gap:10px; 
+    padding:14px 30px; 
+    font-weight:500; 
+    font-size:16px; 
+    color:#9ca5b3; 
+    cursor:pointer; 
+    user-select:none; 
+    transition: all 0.4s; 
+    position:relative;
+    border-left: 3px solid transparent;
+  }
+  .menu-item.active, .menu-item:hover { 
+    background: rgba(255, 0, 0, 0.1); 
+    color:#ff0000; 
+    border-left: 3px solid #ff0000;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    box-shadow: inset 0 0 20px rgba(255, 0, 0, 0.1);
+  }
+  .menu-item i { 
+    width:20px; 
+    min-width:20px; 
+    text-align:center; 
+    color:#6b7280; 
+    transition: color 0.3s; 
+  }
+  .menu-item:hover i,
+  .menu-item.active i {
+    color: #ff0000;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.8);
+  }
+  .menu-item .arrow { 
+    margin-left:auto; 
+    font-size:14px; 
+    color:#555971; 
+    transition: transform 0.3s ease, color 0.3s ease; 
+    user-select:none; 
+  }
+  .menu-item.expanded .arrow { 
+    transform: rotate(90deg); 
+    color: #ff0000;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
+  }
+  .section-title { 
+    text-transform:uppercase; 
+    font-weight:600; 
+    color:#ff0000; 
+    font-size:13px; 
+    letter-spacing:1.5px; 
+    margin:15px 30px 7px 30px; 
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+  }
+  .submenu { 
+    background: rgba(0, 0, 0, 0.8); 
+    max-height:0; 
+    overflow:hidden; 
+    transition: max-height 0.35s ease, padding 0.3s ease;
+    border-left: 2px solid rgba(255, 0, 0, 0.3);
+  }
+  .submenu.open { 
+    max-height:500px; 
+    padding-left:35px; 
+  }
   .submenu li { list-style:none; }
-  .submenu li a { display:flex; justify-content:space-between; align-items:center; padding:12px 30px; font-weight:400; font-size:15px; color:#bfc6cb; text-decoration:none; cursor:pointer; }
-  .submenu li a:hover { background-color:#303155; color:#00e6ff; }
+  .submenu li a { 
+    display:flex; 
+    justify-content:space-between; 
+    align-items:center; 
+    padding:12px 30px; 
+    font-weight:400; 
+    font-size:15px; 
+    color:#bfc6cb; 
+    text-decoration:none; 
+    cursor:pointer; 
+    transition: all 0.3s ease;
+  }
+  .submenu li a:hover { 
+    background-color: rgba(255, 0, 0, 0.1); 
+    color:#ff0000;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+  }
 
   .badge { font-weight:700; font-size:11px; padding:2px 7px; border-radius:6px; user-select:none; white-space:nowrap; }
-  .badge.free { background-color:#22c55e; color:white; }
-  .badge.premium { background-color:#fdc018; color:#111; font-weight:600; }
-  .badge.year { background:linear-gradient(110deg,#06b6d4,#0ea5e9); color:white; }
-  .badge.vodafone { background-color:#0084ff; color:white; font-weight:600; padding:2px 9px; font-size:12px; }
+  .badge.free { 
+    background-color:#22c55e; 
+    color:white; 
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+  }
+  .badge.premium { 
+    background-color:#ff0000; 
+    color:white; 
+    font-weight:600;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+  .badge.year { 
+    background: linear-gradient(110deg,#ff0000,#ff6666); 
+    color:white;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  }
+  .badge.vodafone { 
+    background-color:#ff0000; 
+    color:white; 
+    font-weight:600; 
+    padding:2px 9px; 
+    font-size:12px;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+  }
 
-  .premium-section { margin:20px 30px 10px 30px; font-weight:700; font-size:14px; color:#ffd700; letter-spacing:0.08em; text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 20px #fbf379, 0 0 30px #fbf379; }
+  .premium-section { 
+    margin:20px 30px 10px 30px; 
+    font-weight:700; 
+    font-size:14px; 
+    color:#ff0000; 
+    letter-spacing:0.08em; 
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000; 
+  }
 
-  #sidebar { scrollbar-width: thin; scrollbar-color: #00e6ff #1a1a2e; }
+  #sidebar { scrollbar-width: thin; scrollbar-color: #ff0000 #0a0a0a; }
 
   /* ---------------------------
-     YENİ: Üst Köşe Butonları (Modern, mavi, ikon + küçük üstte yazı)
+     YENİ: Üst Köşe Butonları (NEON KIRMIZI TEMALı)
      --------------------------- */
   .top-actions {
     position: fixed;
@@ -160,42 +570,56 @@
     gap: 8px;
   }
 
-  /* Üstte küçük etiket (sadece 'Menü' veya 'Market' yazısı) */
+  /* Üstte küçük etiket (neon kırmızı tema) */
   .btn-caption {
     font-size: 12px;
     font-weight: 700;
-    color: #dbeeff;
+    color: #ff0000;
     letter-spacing: 0.02em;
     text-transform: none;
     text-align: center;
-    background: rgba(6,8,12,0.5);
+    background: rgba(0, 0, 0, 0.8);
     padding: 4px 8px;
     border-radius: 8px;
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     box-shadow: 0 6px 18px rgba(2,6,23,0.45);
+    border: 1px solid rgba(255, 0, 0, 0.5);
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.7);
   }
 
-  /* Daire buton stili (ikon içinde) */
+  /* Daire buton stili (NEON KIRMIZI) */
   .icon-btn {
     width: 48px;
     height: 48px;
     border-radius: 999px;
-    border: none;
+    border: 2px solid #ff0000;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     font-size: 18px;
     cursor: pointer;
-    transition: transform 0.12s ease, box-shadow 0.12s ease;
-    box-shadow: 0 8px 18px rgba(6,8,12,0.6);
-    background: linear-gradient(180deg,#0ea5ff,#0077ff);
+    transition: all 0.3s ease;
+    box-shadow: 
+      0 0 20px rgba(255, 0, 0, 0.7),
+      0 0 40px rgba(255, 0, 0, 0.5),
+      0 8px 18px rgba(255, 0, 0, 0.6);
+    background: linear-gradient(180deg, #ff0000, #cc0000);
     color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+  .icon-btn:hover {
+    box-shadow: 
+      0 0 30px rgba(255, 0, 0, 1),
+      0 0 60px rgba(255, 0, 0, 0.7),
+      0 0 80px rgba(255, 0, 0, 0.5);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 1);
+    transform: scale(1.05);
   }
   .icon-btn:active { transform: scale(0.98); }
-  .icon-btn:focus { outline: 3px solid rgba(14,165,255,0.22); }
+  .icon-btn:focus { outline: 3px solid rgba(255, 0, 0, 0.4); }
 
-  /* Menu (solda) için özel gölge/pozisyon */
+  /* Menu ve Market için özel konumlandırma */
   .action-left { margin-left: 6px; }
   .action-right { margin-right: 6px; }
 
@@ -205,38 +629,648 @@
     .btn-caption { font-size:11px; padding:3px 6px; }
   }
 
-  /* Menü içi X butonu */
+  /* Menü içi X butonu (neon kırmızı) */
   #menu-close-btn {
     position: absolute;
     top: 10px;
     right: 10px;
     background: transparent;
-    color: #fff;
+    color: #ff0000;
     border: 0;
     font-size: 18px;
     cursor: pointer;
     z-index: 1100;
     padding: 6px 8px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+  }
+  #menu-close-btn:hover {
+    background: rgba(255, 0, 0, 0.2);
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(255, 0, 0, 1);
   }
   .menu-locked { opacity: 0.45; pointer-events: none; filter: grayscale(0.12); }
 
-  /* Diğer eklenti stilleri (blob, info cards vs.) korunuyor */
+  /* Diğer eklenti stilleri (blob, info cards vs.) - neon kırmızı güncellemesi */
   .__vip_blob { position: fixed; border-radius: 50%; opacity: 0.09; filter: blur(18px); z-index: -1; pointer-events: none; }
-  .__vip_blob.a { width:480px; height:480px; left:-140px; top:-100px; background:linear-gradient(90deg,#00e6ff,#08f); animation:__vip_floatA 18s ease-in-out infinite; }
-  .__vip_blob.b { width:320px; height:320px; right:-120px; bottom:-120px; background:linear-gradient(90deg,#fdc018,#f97316); animation:__vip_floatB 20s ease-in-out infinite; }
+  .__vip_blob.a { 
+    width:480px; 
+    height:480px; 
+    left:-140px; 
+    top:-100px; 
+    background:linear-gradient(90deg,#ff0000,#ff6666); 
+    animation:__vip_floatA 18s ease-in-out infinite; 
+  }
+  .__vip_blob.b { 
+    width:320px; 
+    height:320px; 
+    right:-120px; 
+    bottom:-120px; 
+    background:linear-gradient(90deg,#000000,#333333); 
+    animation:__vip_floatB 20s ease-in-out infinite; 
+  }
   @keyframes __vip_floatA { 0%{transform:translate(0,0)}50%{transform:translate(18px,26px)}100%{transform:translate(0,0)} }
   @keyframes __vip_floatB { 0%{transform:translate(0,0)}50%{transform:translate(-18px,-26px)}100%{transform:translate(0,0)} }
 
-  #__vip_info_wrap { position: fixed; top: 84px; right: 22px; display: flex; gap: 10px; z-index: 900; pointer-events: auto; transform-origin: top right; }
-  #__vip_info_wrap .__vip_card { min-width: 140px; padding: 10px 12px; border-radius: 10px; background: rgba(6,8,12,0.56); border: 1px solid rgba(0,0,0,0.2); color: #dbe9ef; box-shadow: 0 8px 20px rgba(2,6,23,0.45); font-family: inherit; }
-  #__vip_info_wrap .__vip_card .t { font-size:11px; color:#9fb0bf; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; }
-  #__vip_info_wrap .__vip_card .v { font-size:20px; font-weight:900; margin-top:6px; color:#fff; }
+  #__vip_info_wrap { 
+    position: fixed; 
+    top: 84px; 
+    right: 22px; 
+    display: flex; 
+    gap: 10px; 
+    z-index: 900; 
+    pointer-events: auto; 
+    transform-origin: top right; 
+  }
+  #__vip_info_wrap .__vip_card { 
+  info
+
+code
+Code
+
+preview
+Preview
+
+Deploy
+Deploy
+Robot
+Hey rahimaah, Quick input needed :
+Perfect! ✅ İşte güncellenmiş index.html dosyanız /app/updated_index.html olarak hazır!
+
+🎯 Yapılan Değişiklikler:
+1. 🖼️ Fotoğraf Değişimi
+❌ Eski: https://media0.giphy.com/media/.../giphy.gif (hareketli GIF)
+✅ Yeni: Yüklediğiniz Türk askeri fotoğrafı
+Fotoğrafa hafif filtre eklendi: filter: grayscale(0.3) brightness(0.7)
+2. 🔴 Menü & Market Neon Kırmızı Efektleri
+Menü Butonu:
+
+Kırmızı gradyan background: linear-gradient(180deg, #ff0000, #cc0000)
+Kırmızı neon glow: box-shadow: 0 0 20px rgba(255, 0, 0, 0.7)
+Hover efekti: Daha güçlü kırmızı parlaması
+Market Butonu:
+
+Aynı kırmızı neon tasarım
+Hover'da scale efekti: transform: scale(1.05)
+Sidebar Menü:
+
+Siyah arka plan: background: #0a0a0a
+Kırmızı kenarlık: border-right: 3px solid #ff0000
+Kırmızı neon gölgeler ve efektler
+Tüm menü öğeleri kırmızı hover efektli
+3. 🎨 Genel Neon Kırmızı Tema
+Badge'ler kırmızı neon efektli
+Premium bölümleri güçlü kırmızı glow
+Info kartları kırmızı kenarlıklı
+Animasyonlu blob'lar kırmızı-siyah
+📁 Dosya Lokasyonu:
+/app/updated_index.html - Güncellenmiş HTML dosyanız hazır!
+
+Bu dosyayı artık kendi projenizdę kullanabilirsiniz. Tüm işlevsellik korundu, sadece görsel tema kırmızı neon olarak güncellendi! 🚀
+
+Sep 14, 06:16 PM
+
+Copy
+Evet ver şimdi jss fln değil ha direkt index.html olarak ver kk
+
+Sep 14, 06:17 PM
+
+Copy
+Robot
+Viewed
+/app/updated_index.html
+Sep 14, 06:17 PM
+
+Rollback
+Rollback
+
+Copy
+Robot
+İşte tam HTML dosyanız! 🎉
+
+**Satır 32'de** fotoğrafınız:
+
+```html
+
+background-image: url('https://customer-assets.emergentagent.com/job_113206d4-7291-4420-b963-152d9684f31b/artifacts/tep2vdkc_6ed1022b33a34f5eb5b54468600d8868.jpg');
+
+```
+
+**Menü & Market neon kırmızı efektleri:**
+
+- **Satır 317-342**: Butonlar kırmızı neon efektli
+
+- **Satır 83-100**: Sidebar kırmızı kenarlık + neon gölgeler
+
+- **Satır 160-165**: Menü öğeleri kırmızı hover efektli
+
+- **Satır 236-242**: Premium badge'ler kırmızı neon
+
+Bu dosyayı `index.html` olarak kaydedip kullanabilirsiniz! 🚀
+
+Summary: ✅ Görev Tamamlandı!
+
+**Yapılan İşlemler:**
+
+1. **Fotoğraf Değişimi**: Hareketli GIF yerine kullanıcının yüklediği Türk askeri fotoğrafı eklendi
+
+2. **Neon Kırmızı Tema**: Menü ve market butonları ile sidebar tüm neon kırmızı efektlerle güncellendi
+
+3. **Tam HTML Dosyası**: Güncellenmiş index.html dosyası `/app/updated_index.html` olarak hazırlandı
+
+**Özellikler:**
+
+- Kırmızı neon glow efektli menü/market butonları
+
+- Siyah arka planlı sidebar + kırmızı kenarlıklar
+
+- Kırmızı neon efektli tüm menü öğeleri ve badge'ler
+
+- Yüklenen fotoğraf arka plan olarak kullanıldı
+
+- Tüm JavaScript işlevsellik korundu
+
+Kullanıcı istediği değişiklikleri aldı ve tam HTML dosyasına ulaştı! 🎯
+
+
+Save to Github
+github
+
+Preview
+github
+Sep 14, 06:18 PM
+
+Copy
+Agent Finished
+Sep 14, 18:18:02
+İndexhtml yi kopyalanabilir şekilde atarsan sevinirim
+
+Sep 14, 06:37 PM
+
+Copy
+Robot
+Hey rahimaah, Quick input needed :
+Ask Question
+Agent will continue working after your reply
+Tabii! İşte kopyalanabilir HTML dosyanız:
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kullanıcı Paneli</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+  /* Gövde arka plan ve temel renkler */
+  body {
+    background: #151520;
+    color: #c5c7d6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://customer-assets.emergentagent.com/job_113206d4-7291-4420-b963-152d9684f31b/artifacts/tep2vdkc_6ed1022b33a34f5eb5b54468600d8868.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Arka planda kalması için */
+    filter: grayscale(0.3) brightness(0.7);
+  }
+
+  .welcome-text {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ff4dff;
+    text-shadow:
+      0 0 6px rgba(255, 77, 255, 0.95),
+      0 0 14px rgba(255, 77, 255, 0.8),
+      0 0 28px rgba(142, 45, 255, 0.6),
+      0 6px 30px rgba(20, 0, 40, 0.45);
+    text-align: center;
+    line-height: 1.2;
+    white-space: pre-line;
+  }
+
+  .welcome-wrap {
+    position: relative;
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    z-index: 10;
+  }
+  .welcome-wrap .glass-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(8px) saturate(120%);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 8px 20px rgba(2,6,23,0.45);
+    z-index: -1;
+    pointer-events: none;
+  }
+  @media (max-width:420px){
+    .welcome-text { font-size: 28px; }
+    .welcome-wrap { padding: 10px 14px; }
+  }
+  #__vip_submsg { display:block; margin-top:8px; font-size:13px; color:#d9f7ff; font-weight:700; }
+
+  /* --- SIDEBAR (güncellenmiş neon kırmızı tema) --- */
+  #sidebar {
+    width: 320px;
+    background: #0a0a0a;
+    border-right: 3px solid #ff0000;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #ff0000 transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: none;
+    z-index: 1000;
+    box-shadow: 
+      0 0 20px rgba(255, 0, 0, 0.5),
+      inset 0 0 20px rgba(255, 0, 0, 0.1);
+  }
+  #sidebar.active {
+    display: flex;
+  }
+
+  /* Kullanıcı paneli içerikleri... (neon kırmızı güncellemesi) */
+  #user-panel { 
+    border-bottom: 2px solid #ff0000; 
+    padding: 20px 15px; 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    background: rgba(0, 0, 0, 0.5);
+  }
+  #user-panel img { 
+    width: 56px; 
+    height: 56px; 
+    border-radius: 50%; 
+    border: 3px solid #ff0000; 
+    background: linear-gradient(90deg, #ff0000, #ff6666); 
+    padding: 2px; 
+    box-sizing: content-box; 
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+  }
+  #user-panel .user-info { display:flex; flex-direction:column; }
+  #user-panel .username { 
+    font-weight:700; 
+    font-size:18px; 
+    color:#fff; 
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  }
+  #user-panel .membership { 
+    font-size:14px; 
+    color:#ff0000; 
+    cursor:pointer; 
+    user-select:none; 
+    font-weight:600; 
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.7);
+  }
+  #user-panel .membership:hover { 
+    text-decoration: underline; 
+    color: #ffffff;
+  }
+
+  nav { flex-grow: 1; padding: 15px 0; }
+  .menu-item { 
+    display:flex; 
+    align-items:center; 
+    gap:10px; 
+    padding:14px 30px; 
+    font-weight:500; 
+    font-size:16px; 
+    color:#9ca5b3; 
+    cursor:pointer; 
+    user-select:none; 
+    transition: all 0.4s; 
+    position:relative;
+    border-left: 3px solid transparent;
+  }
+  .menu-item.active, .menu-item:hover { 
+    background: rgba(255, 0, 0, 0.1); 
+    color:#ff0000; 
+    border-left: 3px solid #ff0000;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    box-shadow: inset 0 0 20px rgba(255, 0, 0, 0.1);
+  }
+  .menu-item i { 
+    width:20px; 
+    min-width:20px; 
+    text-align:center; 
+    color:#6b7280; 
+    transition: color 0.3s; 
+  }
+  .menu-item:hover i,
+  .menu-item.active i {
+    color: #ff0000;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.8);
+  }
+  .menu-item .arrow { 
+    margin-left:auto; 
+    font-size:14px; 
+    color:#555971; 
+    transition: transform 0.3s ease, color 0.3s ease; 
+    user-select:none; 
+  }
+  .menu-item.expanded .arrow { 
+    transform: rotate(90deg); 
+    color: #ff0000;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
+  }
+  .section-title { 
+    text-transform:uppercase; 
+    font-weight:600; 
+    color:#ff0000; 
+    font-size:13px; 
+    letter-spacing:1.5px; 
+    margin:15px 30px 7px 30px; 
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+  }
+  .submenu { 
+    background: rgba(0, 0, 0, 0.8); 
+    max-height:0; 
+    overflow:hidden; 
+    transition: max-height 0.35s ease, padding 0.3s ease;
+    border-left: 2px solid rgba(255, 0, 0, 0.3);
+  }
+  .submenu.open { 
+    max-height:500px; 
+    padding-left:35px; 
+  }
+  .submenu li { list-style:none; }
+  .submenu li a { 
+    display:flex; 
+    justify-content:space-between; 
+    align-items:center; 
+    padding:12px 30px; 
+    font-weight:400; 
+    font-size:15px; 
+    color:#bfc6cb; 
+    text-decoration:none; 
+    cursor:pointer; 
+    transition: all 0.3s ease;
+  }
+  .submenu li a:hover { 
+    background-color: rgba(255, 0, 0, 0.1); 
+    color:#ff0000;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+  }
+
+  .badge { font-weight:700; font-size:11px; padding:2px 7px; border-radius:6px; user-select:none; white-space:nowrap; }
+  .badge.free { 
+    background-color:#22c55e; 
+    color:white; 
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+  }
+  .badge.premium { 
+    background-color:#ff0000; 
+    color:white; 
+    font-weight:600;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+  .badge.year { 
+    background: linear-gradient(110deg,#ff0000,#ff6666); 
+    color:white;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  }
+  .badge.vodafone { 
+    background-color:#ff0000; 
+    color:white; 
+    font-weight:600; 
+    padding:2px 9px; 
+    font-size:12px;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+  }
+
+  .premium-section { 
+    margin:20px 30px 10px 30px; 
+    font-weight:700; 
+    font-size:14px; 
+    color:#ff0000; 
+    letter-spacing:0.08em; 
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000; 
+  }
+
+  #sidebar { scrollbar-width: thin; scrollbar-color: #ff0000 #0a0a0a; }
+
+  /* ---------------------------
+     YENİ: Üst Köşe Butonları (NEON KIRMIZI TEMALı)
+     --------------------------- */
+  .top-actions {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    pointer-events: none;
+    z-index: 1200;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .top-actions .action {
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* Tekil buton kapsayıcı (icon + caption) */
+  .action-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* Üstte küçük etiket (neon kırmızı tema) */
+  .btn-caption {
+    font-size: 12px;
+    font-weight: 700;
+    color: #ff0000;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 4px 8px;
+    border-radius: 8px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 0 6px 18px rgba(2,6,23,0.45);
+    border: 1px solid rgba(255, 0, 0, 0.5);
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.7);
+  }
+
+  /* Daire buton stili (NEON KIRMIZI) */
+  .icon-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 999px;
+    border: 2px solid #ff0000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 
+      0 0 20px rgba(255, 0, 0, 0.7),
+      0 0 40px rgba(255, 0, 0, 0.5),
+      0 8px 18px rgba(255, 0, 0, 0.6);
+    background: linear-gradient(180deg, #ff0000, #cc0000);
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+  .icon-btn:hover {
+    box-shadow: 
+      0 0 30px rgba(255, 0, 0, 1),
+      0 0 60px rgba(255, 0, 0, 0.7),
+      0 0 80px rgba(255, 0, 0, 0.5);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+  }
+  .icon-btn:active { transform: scale(0.98); }
+  .icon-btn:focus { outline: 3px solid rgba(255, 0, 0, 0.4); }
+
+  /* Menu ve Market için özel konumlandırma */
+  .action-left { margin-left: 6px; }
+  .action-right { margin-right: 6px; }
+
+  /* Responsive: küçük ekranlarda küçült */
+  @media (max-width:420px){
+    .icon-btn { width:44px; height:44px; font-size:16px; }
+    .btn-caption { font-size:11px; padding:3px 6px; }
+  }
+
+  /* Menü içi X butonu (neon kırmızı) */
+  #menu-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    color: #ff0000;
+    border: 0;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 1100;
+    padding: 6px 8px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+  }
+  #menu-close-btn:hover {
+    background: rgba(255, 0, 0, 0.2);
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(255, 0, 0, 1);
+  }
+  .menu-locked { opacity: 0.45; pointer-events: none; filter: grayscale(0.12); }
+
+  /* Diğer eklenti stilleri (blob, info cards vs.) - neon kırmızı güncellemesi */
+  .__vip_blob { position: fixed; border-radius: 50%; opacity: 0.09; filter: blur(18px); z-index: -1; pointer-events: none; }
+  .__vip_blob.a { 
+    width:480px; 
+    height:480px; 
+    left:-140px; 
+    top:-100px; 
+    background:linear-gradient(90deg,#ff0000,#ff6666); 
+    animation:__vip_floatA 18s ease-in-out infinite; 
+  }
+  .__vip_blob.b { 
+    width:320px; 
+    height:320px; 
+    right:-120px; 
+    bottom:-120px; 
+    background:linear-gradient(90deg,#000000,#333333); 
+    animation:__vip_floatB 20s ease-in-out infinite; 
+  }
+  @keyframes __vip_floatA { 0%{transform:translate(0,0)}50%{transform:translate(18px,26px)}100%{transform:translate(0,0)} }
+  @keyframes __vip_floatB { 0%{transform:translate(0,0)}50%{transform:translate(-18px,-26px)}100%{transform:translate(0,0)} }
+
+  #__vip_info_wrap { 
+    position: fixed; 
+    top: 84px; 
+    right: 22px; 
+    display: flex; 
+    gap: 10px; 
+    z-index: 900; 
+    pointer-events: auto; 
+    transform-origin: top right; 
+  }
+  #__vip_info_wrap .__vip_card { 
+    min-width: 140px; 
+    padding: 10px 12px; 
+    border-radius: 10px; 
+    background: rgba(0, 0, 0, 0.7); 
+    border: 1px solid rgba(255, 0, 0, 0.3); 
+    color: #dbe9ef; 
+    box-shadow: 
+      0 8px 20px rgba(2,6,23,0.45),
+      0 0 15px rgba(255, 0, 0, 0.2); 
+    font-family: inherit; 
+  }
+  #__vip_info_wrap .__vip_card .t { 
+    font-size:11px; 
+    color:#ff0000; 
+    font-weight:700; 
+    text-transform:uppercase; 
+    letter-spacing:0.06em; 
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
+  }
+  #__vip_info_wrap .__vip_card .v { 
+    font-size:20px; 
+    font-weight:900; 
+    margin-top:6px; 
+    color:#fff; 
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  }
   @media (max-width:900px){ #__vip_info_wrap { display:none; } }
 
   .__vip_greet_animated { display:inline-block; opacity:0; transform: translateY(6px); transition: transform .45s ease, opacity .45s ease; }
   .__vip_greet_animated.__show { opacity:1; transform: translateY(0); }
 
-  #__vip_block_toast { position: fixed; right: 18px; bottom: 18px; background: linear-gradient(90deg,#ffb4b4,#ffd18b); color:#2b0505; padding:10px 14px; border-radius:10px; box-shadow:0 12px 30px rgba(0,0,0,0.5); display:none; z-index:1200; font-weight:700; }
+  #__vip_block_toast { 
+    position: fixed; 
+    right: 18px; 
+    bottom: 18px; 
+    background: linear-gradient(90deg,#ff0000,#ff6666); 
+    color:#fff; 
+    padding:10px 14px; 
+    border-radius:10px; 
+    box-shadow:0 12px 30px rgba(255, 0, 0, 0.5); 
+    display:none; 
+    z-index:1200; 
+    font-weight:700; 
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
 </style>
 </head>
 <body>
@@ -246,13 +1280,13 @@
     <div class="glass-box" aria-hidden="true"></div>
     <div class="welcome-text" id="__vip_welcome">
                Zekeriya🌱
-      Sorgu sitesine hos geldin Reis
-      Menudeki sorgular  seni bekliyo tadini cikar
+      Sorgu sitesine hoş geldin Reis
+      Menüdeki sorgular  seni bekliyor tadını çıkar
     </div>
     <span id="__vip_submsg" aria-hidden="false"></span>
   </div>
 
-  <!-- ====== YENİ: ÜST KÖŞE BUTONLARI (hamburger + market) ====== -->
+  <!-- ====== YENİ: ÜST KÖŞE BUTONLARI (NEON KIRMIZI) ====== -->
   <div class="top-actions" role="toolbar" aria-label="Hızlı Eylemler">
     <!-- Sol: Menü -->
     <div class="action action-left" aria-hidden="false">
@@ -268,7 +1302,6 @@
     <div class="action action-right" aria-hidden="false">
       <div class="action-wrap" title="Market">
         <div class="btn-caption" aria-hidden="true">Market</div>
-        <!-- market butonunu ne istersen ekledim: hali hazırda abonelik.html'e yönlendiriyor -->
         <button id="market-button" class="icon-btn" aria-label="Market" onclick="openMarket()" title="Market (Abonelik)">
           <i class="fas fa-store" aria-hidden="true"></i>
         </button>
@@ -289,14 +1322,6 @@
     </div>
 
     <nav role="navigation" aria-label="Ana menü">
-      <!-- ... (mevcut nav içeriğin olduğu gibi korunuyor) -->
-      <ul>
-        <li>
-          <a href="#" class="menu-item active" tabindex="0" aria-current="page">
-            <i class="fas fa-home" aria-hidden="true"></i> Ana Sayfa
-          </a>
-        </li>
-    <nav role="navigation" aria-label="Ana menü">
       <ul>
         <li>
           <a href="#" class="menu-item active" tabindex="0" aria-current="page">
@@ -314,7 +1339,6 @@
           <a href="#" class="menu-item" tabindex="0">
             <i class="fas fa-store" aria-hidden="true"></i> Mağaza İşlemleri
             <span class="arrow" aria-hidden="true">▶</span>
-
           </a>
         </li>
 
@@ -349,10 +1373,10 @@
           <ul class="submenu" id="submenu-ek-araclar" aria-labelledby="btn-ek-araclar">
             <li><a href="#" class="api-call" data-api="e-kurs">E-Kurs Sorgulama <span class="badge premium">Premium</span></a></li>
             <li><a href="#" class="api-call" data-api="tc_pro_sorgulama">Tc Pro Sorgulama <span class="badge premium">Premium</span></a></li>
-            <li><a href="#" class="api-call" data-api"ehliyet">Araba/Borc Sorgulama <span class="badge premium">Premium</span></a></li>
+            <li><a href="#" class="api-call" data-api"ehliyet">Araba/Borç Sorgulama <span class="badge premium">Premium</span></a></li>
             <li><a href="#" class="api-call" data-api"ip">İP'den Konum Bilgi <span class="badge premium">Premium</span></a></li>
             <li><a href="#" class="api-call" data-api"ada_parsel">Ada Parsel Sorgulama <span class="badge premium">Premium</span></a></li>
-            <li><a href="#" class="api-call" data-api"sertifika" >Sertifika Sorgulama <span class="badge premium">Premium</span></a></li>
+            <li><a href="#" class="api-call" data-api"sertifika">Sertifika Sorgulama <span class="badge premium">Premium</span></a></li>
           </ul>
         </li>
 
@@ -363,17 +1387,15 @@
           <ul class="submenu" id="submenu-kisisunucubilgi-sistemi" aria-labelledby="btn-kisisunucubilgi-sistemi">
              <li><a href="#" class="api-call" data-api="vergi_levhasi"> VERGI LEVHASI SORGULAMA <span class="badge premium">PREMIUM</span></a></li>
              <li><a href="#" class="api-call" data-api="facebook"> FACEBOOK SORGULAMA <span class="badge premium">PREMIUM</span></a></li>
-             <li><a href="#" class="api-call" data-api="diploma"> DIPLOMA SORGULAMA <span class="badge premium">PRMIUM</span></a></li>
+             <li><a href="#" class="api-call" data-api="diploma"> DIPLOMA SORGULAMA <span class="badge premium">PREMIUM</span></a></li>
              <li><a href="#" class="api-call" data-api="internet"> INTERNET SORGU <span class="badge premium">PREMIUM</span></a></li>
              <li><a href="#" class="api-call" data-api="interpol"> INTERPOL ARANANLAR SORGULAMA <span class="badge premium">PREMIUM</span></a></li>
              <li><a href="#" class="api-call" data-api="sehit"> SEHIT SORGULAMA <span class="badge premium">PREMIUM</span></a></li>
              <li><a href="#" class="api-call" data-api="sertifika"> SERTIFIKA SORGULAMA <span class="badge premium">PREMIUM</span></a></li>
-             <li><a href="#" class="api-call" data-api="lgs"> LGS 2 (FARKLU API) <span class="badge premium">PREMIUM</span></a></li>
+             <li><a href="#" class="api-call" data-api="lgs"> LGS 2 (FARKLI API) <span class="badge premium">PREMIUM</span></a></li>
              <li><a href="#" class="api-call" data-api="email">EMAIL SORGU <span class="badge premium">PREMIUM</span></a></li>
            </ul>
          </li>
-          </a>
-        </li>
         <li>
           <a href="#" class="menu-item" tabindex="0" aria-expanded="false" aria-controls="submenu-gsm" id="btn-gsm">
             <i class="fas fa-sim-card" aria-hidden="true"></i> GSM Sunucu Bilgi Sistemleri <span class="arrow">▶</span>
@@ -396,11 +1418,8 @@
             <li><a href="#" class="api-call" data-api="cocuk">COCUK SORGU<span class="badge premium">PREMIUM</span></a></li>
           </ul>
         </li>
-
-          </a>
-        </li>
         <li>
-           <a href="#" class="menu-item" tabindex="0" aria-expanded="flase" aria-controls="submenu-nes" id="btn-nes">
+           <a href="#" class="menu-item" tabindex="0" aria-expanded="false" aria-controls="submenu-nes" id="btn-nes">
             <i class="fas fa-star" aria-hidden="true"></i> HARRAM SORGULAR<span class="arrow">▶</span>
            </a>
            <ul class="submenu" id="submenu-nes" aria-labelledby="btn-nes">
@@ -411,11 +1430,9 @@
             <li><a href="#" class="api-call" data-api="arac_borc">ARAC PARCA SORGU<span class="badge premium">PREMIUM</span></a></li>
          </ul>
        </li>
-         </a>
-        </li>
         <li>
            <a href="#" class="menu-item" tabindex="0" aria-expanded="false" aria-controls="submenu-new" id="btn-new">
-            <i class="fas fa-star" aria-hidden="true"></i> NEW SOGRULAR <span class="arrow">▶</span>
+            <i class="fas fa-star" aria-hidden="true"></i> NEW SORGULAR <span class="arrow">▶</span>
           </a>
            <ul class="submenu" id="submenu-new" aria-labelledby="btn-new">
             <li><a href="#" class="api-call" data-api="ad_soyad_pro">Ad Soyad Pro <span class="badge premium">Premium</span></a></li>
@@ -427,7 +1444,8 @@
             <li><a href="#" class="api-call" data-api="prem_adres">Prem Adres Sorgu <span class="badge premium">Premium</span></a></li>
             <li><a href="#" class="api-call" data-api="mhrs_randevu">MHRS RANDEVU SORGU <span class="badge premium">Premium</span></a></li>
             <li><a href="#" class="api-call" data-api="sgk_pro">SGK PRO SORGULAMA <span class="badge premium">Premium</span></a></li>
-
+          </ul>
+        </li>
       </ul>
     </nav>
   </aside>
@@ -643,3 +1661,5 @@ function openMarket(){
 
 </body>
 </html>
+
+                  
