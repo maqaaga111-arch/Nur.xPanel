@@ -1,2 +1,2 @@
-# Zekix.panel
-Zekix panel render
+# Nurx.panel
+Nur panel render
